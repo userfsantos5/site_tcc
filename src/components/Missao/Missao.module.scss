@@ -1,0 +1,60 @@
+.missao {
+  background: var(--cor-fundo-alternativo);
+}
+
+.cabecalhoMissao {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.tituloMissao {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--cor-texto);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.descricaoMissao {
+  font-size: 1.125rem;
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gridMissao {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.cardMissao {
+  text-align: center;
+  border-top: 4px solid var(--cor-primaria);
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.tituloCardMissao {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--cor-primaria);
+}
+
+.textoCardMissao {
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin: 0;
+}

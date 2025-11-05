@@ -1,0 +1,252 @@
+.heroContato {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.conteudoHero {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tituloHero {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.subtituloHero {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Conteúdo do Contato
+.conteudoContato {
+  background: var(--cor-fundo);
+}
+
+.gridContato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+// Informações de Contato
+.infoContato {
+  .tituloInfoContato {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--cor-texto);
+  }
+
+  .descricaoInfoContato {
+    color: var(--cor-texto-claro);
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+}
+
+.itensContato {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.itemContato {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--cor-fundo-alternativo);
+  border-radius: var(--borda-arredondada);
+  border-left: 4px solid var(--cor-primaria);
+}
+
+.iconeContato {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.detalhesContato {
+  flex: 1;
+}
+
+.tituloItemContato {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--cor-texto);
+}
+
+.detalheContato {
+  color: var(--cor-texto-claro);
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.horarioAtendimento {
+  background: var(--cor-fundo-alternativo);
+  padding: 30px;
+  border-radius: var(--borda-arredondada);
+  border-top: 4px solid var(--cor-sucesso);
+
+  .tituloHorarioAtendimento {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--cor-sucesso);
+  }
+}
+
+.listaHorarios {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itemHorario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--cor-borda);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  span:first-child {
+    font-weight: 500;
+    color: var(--cor-texto);
+  }
+
+  span:last-child {
+    color: var(--cor-texto-claro);
+  }
+}
+
+// Formulário de Contato
+.secaoFormularioContato {
+  .tituloFormulario {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--cor-texto);
+  }
+}
+
+.formularioContato {
+  background: var(--cor-fundo-alternativo);
+  padding: 40px;
+  border-radius: var(--borda-arredondada);
+  
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+  }
+}
+
+.grupoFormulario {
+  margin-bottom: 24px;
+}
+
+.rotuloFormulario {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--cor-texto);
+}
+
+.inputFormulario,
+.selectFormulario,
+.textareaFormulario {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+  }
+}
+
+.textareaFormulario {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.botaoEnviar {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+}
+
+// FAQ Section
+.secaoFAQ {
+  background: var(--cor-fundo-alternativo);
+  padding: 60px;
+  border-radius: var(--borda-arredondada);
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
+}
+
+.tituloFAQ {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--cor-texto);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.gridFAQ {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.itemFAQ {
+  background: var(--cor-fundo);
+  padding: 30px;
+  border-radius: var(--borda-arredondada);
+  text-align: left;
+  box-shadow: var(--sombra);
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--cor-primaria);
+  }
+
+  p {
+    color: var(--cor-texto-claro);
+    line-height: 1.6;
+    margin: 0;
+  }
+}

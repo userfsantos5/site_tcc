@@ -1,0 +1,199 @@
+.containerAutenticacao {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cardAutenticacao {
+  background: var(--cor-fundo);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--sombra-grande);
+  width: 100%;
+  max-width: 450px;
+  
+  @media (max-width: 480px) {
+    padding: 30px 20px;
+  }
+}
+
+.cabecalhoAutenticacao {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+}
+
+.iconeLogo {
+  font-size: 1.75rem;
+}
+
+.tituloAutenticacao {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--cor-texto);
+}
+
+.subtituloAutenticacao {
+  color: var(--cor-texto-claro);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.formularioAutenticacao {
+  .grupoFormulario {
+    margin-bottom: 20px;
+  }
+
+  .rotuloFormulario {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--cor-texto);
+  }
+
+  .inputFormulario,
+  .selectFormulario {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--borda-arredondada);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--cor-primaria);
+    }
+  }
+}
+
+.opcoesFormulario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rotuloCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--cor-texto-claro);
+  cursor: pointer;
+
+  .checkbox {
+    margin: 0;
+  }
+}
+
+.linkEsqueciSenha {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.grupoTermos {
+  margin-bottom: 24px;
+  
+  .rotuloCheckbox {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+}
+
+.linkTermos {
+  color: var(--cor-primaria);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.botaoEnviar {
+  width: 100%;
+  padding: 14px;
+  background: var(--cor-primaria);
+  color: var(--cor-fundo);
+  border: none;
+  border-radius: var(--borda-arredondada);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+
+  &:hover:not(:disabled) {
+    background: var(--cor-secundaria);
+  }
+
+  &:disabled {
+    background: var(--cor-texto-claro);
+    cursor: not-allowed;
+  }
+}
+
+.rodapeAutenticacao {
+  text-align: center;
+  
+  p {
+    color: var(--cor-texto-claro);
+    margin: 0;
+  }
+}
+
+.linkAutenticacao {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contasDemonstracao {
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--cor-fundo-alternativo);
+  border-radius: var(--borda-arredondada);
+  border-left: 4px solid var(--cor-aviso);
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--cor-texto);
+  }
+
+  .contaDemo {
+    font-size: 0.875rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

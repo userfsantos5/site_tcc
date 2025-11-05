@@ -1,0 +1,228 @@
+.heroServicos {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.conteudoHero {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tituloHero {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.subtituloHero {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Recursos Principais
+.recursosServicos {
+  background: var(--cor-fundo);
+}
+
+.gridRecursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.cardRecurso {
+  background: var(--cor-fundo-alternativo);
+  padding: 40px;
+  border-radius: var(--borda-arredondada);
+  border-left: 4px solid var(--cor-primaria);
+}
+
+.tituloRecurso {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--cor-primaria);
+}
+
+.descricaoRecurso {
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.listaRecurso {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.itemListaRecurso {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--cor-texto-claro);
+  
+  &::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--cor-sucesso);
+    font-weight: 600;
+  }
+}
+
+// Recursos Especiais
+.secaoRecursosEspeciais {
+  margin-bottom: 60px;
+}
+
+.tituloRecursosEspeciais {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--cor-texto);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.gridRecursosEspeciais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.cardRecursoEspecial {
+  background: var(--cor-fundo);
+  padding: 30px;
+  border-radius: var(--borda-arredondada);
+  box-shadow: var(--sombra);
+  text-align: center;
+}
+
+.tituloRecursoEspecial {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--cor-primaria);
+}
+
+.descricaoRecursoEspecial {
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.caracteristicasRecurso {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.caracteristicaRecurso {
+  padding: 6px 0;
+  color: var(--cor-texto-claro);
+  position: relative;
+  padding-left: 20px;
+  
+  &::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+    font-weight: 600;
+  }
+}
+
+// Porque Gratuito
+.secaoPorqueGratuito {
+  background: var(--cor-fundo);
+  padding: 40px;
+  border-radius: var(--borda-arredondada);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.tituloPorqueGratuito {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--cor-texto);
+}
+
+.textoPorqueGratuito {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--cor-texto-claro);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caracteristicasGratuitas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.caracteristicaGratuita {
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--cor-primaria);
+  }
+  
+  p {
+    color: var(--cor-texto-claro);
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+// CTA Section
+.secaoCTA {
+  background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.conteudoCTA {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tituloCTA {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.textoCTA {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+}

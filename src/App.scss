@@ -1,0 +1,255 @@
+// Variáveis e Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #2563eb;
+  --cor-secundaria: #1e40af;
+  --cor-destaque: #3b82f6;
+  --cor-texto: #1f2937;
+  --cor-texto-claro: #6b7280;
+  --cor-fundo: #ffffff;
+  --cor-fundo-alternativo: #f8fafc;
+  --cor-borda: #e5e7eb;
+  --cor-sucesso: #10b981;
+  --cor-aviso: #f59e0b;
+  --cor-erro: #ef4444;
+  
+  --fonte-principal: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --borda-arredondada: 8px;
+  --sombra: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --sombra-grande: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: var(--fonte-principal);
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Utilidades
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--borda-arredondada);
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  gap: 8px;
+
+  &--primario {
+    background: var(--cor-primaria);
+    color: var(--cor-fundo);
+
+    &:hover {
+      background: var(--cor-secundaria);
+      transform: translateY(-2px);
+    }
+  }
+
+  &--secundario {
+    background: transparent;
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+
+    &:hover {
+      background: var(--cor-primaria);
+      color: var(--cor-fundo);
+    }
+  }
+
+  &--grande {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+}
+
+.secao {
+  padding: 80px 0;
+
+  &--clara {
+    background: var(--cor-fundo);
+  }
+
+  &--cinza {
+    background: var(--cor-fundo-alternativo);
+  }
+}
+
+.titulo-secao {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--cor-texto);
+  text-align: center;
+}
+
+.subtitulo-secao {
+  font-size: 1.125rem;
+  color: var(--cor-texto-claro);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+// Sistema de Grid
+.grid {
+  display: grid;
+  gap: 30px;
+
+  &--2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  &--3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  &--4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+// Cards
+.card {
+  background: var(--cor-fundo);
+  border-radius: var(--borda-arredondada);
+  padding: 30px;
+  box-shadow: var(--sombra);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-grande);
+  }
+
+  &--destaque {
+    text-align: center;
+    border-top: 4px solid var(--cor-primaria);
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .secao {
+    padding: 60px 0;
+  }
+
+  .titulo-secao {
+    font-size: 2rem;
+  }
+
+  .botao {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+}
+
+// Página de Autenticação
+.pagina-autenticacao {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+// Página de Administração
+.pagina-admin {
+  min-height: 100vh;
+  background: var(--cor-fundo-alternativo);
+}
+
+.cabecalho-admin {
+  background: var(--cor-fundo);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.conteudo-cabecalho-admin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-admin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.icone-logo {
+  font-size: 1.5rem;
+}
+
+.navegacao-admin {
+  display: flex;
+  gap: 8px;
+}
+
+.item-navegacao-admin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-radius: var(--borda-arredondada);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+
+  &:hover {
+    background: var(--cor-fundo-alternativo);
+  }
+
+  &.ativo {
+    background: var(--cor-primaria);
+    color: var(--cor-fundo);
+  }
+}
+
+.icone-navegacao {
+  font-size: 1.125rem;
+}
+
+.acoes-admin {
+  display: flex;
+  gap: 12px;
+}
+
+.conteudo-admin {
+  padding: 30px 0;
+}

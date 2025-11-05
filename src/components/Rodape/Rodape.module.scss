@@ -1,0 +1,100 @@
+@import "../../App.scss";
+
+
+.rodape {
+  background: var(--cor-texto);
+  color: var(--cor-fundo);
+  padding: 60px 0 30px;
+  margin-top: auto;
+}
+
+.conteudoRodape {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.secaoRodape {
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-fundo);
+    margin-bottom: 16px;
+  }
+
+  .iconeLogo {
+    font-size: 1.75rem;
+  }
+}
+
+.descricaoRodape {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.tituloRodape {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--cor-fundo);
+}
+
+.linksRodape {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkRodape {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--cor-primaria);
+  }
+}
+
+.infoRodape {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+  }
+}
+
+.rodapeInferior {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.direitosAutorais {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.creditos {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  margin: 0;
+}

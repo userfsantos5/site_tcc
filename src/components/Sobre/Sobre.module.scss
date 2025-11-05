@@ -1,0 +1,235 @@
+.heroSobre {
+  background: var(--cor-fundo-alternativo);
+}
+
+.conteudoSobre {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tituloSobre {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--cor-texto);
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.subtituloSobre {
+  font-size: 1.25rem;
+  color: var(--cor-texto-claro);
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.secaoSobre {
+  margin-bottom: 40px;
+}
+
+.tituloSecao {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--cor-texto);
+  
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
+.textoSecao {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: var(--cor-texto-claro);
+}
+
+// Valores Section
+.sobreValores {
+  background: var(--cor-fundo);
+}
+
+.gridValores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.cardValor {
+  background: var(--cor-fundo-alternativo);
+  padding: 30px;
+  border-radius: var(--borda-arredondada);
+  text-align: center;
+  border-left: 4px solid var(--cor-primaria);
+}
+
+.tituloValor {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--cor-primaria);
+}
+
+.descricaoValor {
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.secaoMissao {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tituloMissao {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--cor-texto);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.textoMissao {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: var(--cor-texto-claro);
+}
+
+.destaqueMissao {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--cor-primaria);
+  font-style: italic;
+  margin: 40px 0 0;
+  padding: 20px;
+  background: var(--cor-fundo-alternativo);
+  border-radius: var(--borda-arredondada);
+  border-left: 4px solid var(--cor-primaria);
+}
+
+// Equipe Section
+.sobreEquipe {
+  background: var(--cor-fundo-alternativo);
+}
+
+.cabecalhoEquipe {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.tituloEquipe {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--cor-texto);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.subtituloEquipe {
+  font-size: 1.25rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.textoEquipe {
+  font-size: 1.125rem;
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gridEstatisticas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.cardEstatistica {
+  background: var(--cor-fundo);
+  padding: 30px;
+  border-radius: var(--borda-arredondada);
+  text-align: center;
+  box-shadow: var(--sombra);
+}
+
+.tituloEstatistica {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--cor-primaria);
+}
+
+.descricaoEstatistica {
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.secaoCompromisso {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tituloCompromisso {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--cor-texto);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.textoCompromisso {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  color: var(--cor-texto-claro);
+}
+
+.gridCompromissos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.cardCompromisso {
+  background: var(--cor-fundo);
+  padding: 30px;
+  border-radius: var(--borda-arredondada);
+  box-shadow: var(--sombra);
+  border-top: 4px solid var(--cor-sucesso);
+}
+
+.tituloCardCompromisso {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--cor-sucesso);
+}
+
+.textoCardCompromisso {
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin: 0;
+}

@@ -1,0 +1,250 @@
+.heroFerramentas {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.conteudoHero {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tituloHero {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.subtituloHero {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Grid de Ferramentas
+.gridFerramentas {
+  background: var(--cor-fundo);
+}
+
+.secaoFerramentas {
+  margin-bottom: 60px;
+}
+
+.tituloSecao {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--cor-texto);
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.containerFerramentas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardFerramenta {
+  background: var(--cor-fundo-alternativo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
+  padding: 30px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-grande);
+    border-color: var(--cor-primaria);
+  }
+}
+
+.cabecalhoFerramenta {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.iconeFerramenta {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.nomeFerramenta {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--cor-texto);
+}
+
+.descricaoFerramenta {
+  color: var(--cor-texto-claro);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.categoriaFerramenta {
+  background: var(--cor-primaria);
+  color: var(--cor-fundo);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.componenteFerramenta {
+  margin-top: 20px;
+}
+
+.inputFerramenta {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
+  font-size: 1rem;
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+  }
+}
+
+.forcaSenha {
+  margin-bottom: 16px;
+}
+
+.barraForca {
+  height: 8px;
+  background: var(--cor-aviso);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.textoForca {
+  font-size: 0.875rem;
+  color: var(--cor-texto-claro);
+}
+
+.notaFerramenta {
+  background: var(--cor-fundo);
+  padding: 12px 16px;
+  border-radius: var(--borda-arredondada);
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  color: var(--cor-texto-claro);
+  border-left: 4px solid var(--cor-aviso);
+
+  a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.botaoFerramenta {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--cor-primaria);
+  color: var(--cor-fundo);
+  border: none;
+  border-radius: var(--borda-arredondada);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: var(--cor-secundaria);
+  }
+}
+
+// Seção Recomendadas
+.secaoRecomendadas {
+  margin-bottom: 60px;
+}
+
+.gridRecomendadas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.cardRecomendada {
+  background: var(--cor-fundo-alternativo);
+  padding: 30px;
+  border-radius: var(--borda-arredondada);
+  border-left: 4px solid var(--cor-sucesso);
+}
+
+.tituloRecomendada {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--cor-sucesso);
+}
+
+.descricaoRecomendada {
+  color: var(--cor-texto-claro);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.listaRecomendada {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.itemRecomendada {
+  padding: 8px 0;
+  color: var(--cor-texto-claro);
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--cor-sucesso);
+    font-weight: 600;
+  }
+}
+
+.infoProjeto {
+  background: var(--cor-fundo-alternativo);
+  padding: 30px;
+  border-radius: var(--borda-arredondada);
+  text-align: center;
+  border-top: 4px solid var(--cor-primaria);
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--cor-primaria);
+  }
+
+  p {
+    color: var(--cor-texto-claro);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
