@@ -72,6 +72,3 @@ export default Administracao
 
 
 
-//mateus é muito burro
-
-//vamos fazer o tcc

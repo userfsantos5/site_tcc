@@ -10,7 +10,7 @@ const FerramentasGrid = () => {
       nome: "Verificador de Senha",
       descricao: "Verifique a força da sua senha",
       categoria: "Segurança",
-      icone: "🔒",
+      icone: "",
       componente: (
         <div className={styles.componenteFerramenta}>
           <input

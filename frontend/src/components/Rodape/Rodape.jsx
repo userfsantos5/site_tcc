@@ -11,8 +11,8 @@ const Rodape = () => {
         <div className={styles.conteudoRodape}>
           <div className={styles.secaoRodape}>
             <div className={styles.logo}>
-              <span className={styles.iconeLogo}>🛡️</span>
-              APEX
+              <span className={styles.iconeLogo}></span>
+              Apex
             </div>
             <p className={styles.descricaoRodape}>
               O ápice em segurança de dados. Projeto de utilidade pública criado por estudantes para proteger você no mundo digital.

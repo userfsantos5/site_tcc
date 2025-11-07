@@ -18,7 +18,7 @@ const ContatoConteudo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Aqui você implementaria o envio do formulário
+   
     console.log('Formulário enviado:', dadosFormulario)
     alert('Mensagem enviada com sucesso!')
     setDadosFormulario({ nome: '', email: '', assunto: '', mensagem: '' })
@@ -37,8 +37,7 @@ const ContatoConteudo = () => {
       icone: '',
       titulo: 'Telefone',
       detalhes: [
-        '+55 (11) 1234-5678',
-        'Seg a Sex: 9h às 18h'
+        ''
       ]
     },
     {

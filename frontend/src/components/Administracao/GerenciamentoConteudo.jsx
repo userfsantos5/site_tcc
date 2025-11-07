@@ -88,10 +88,10 @@ const GerenciamentoConteudo = () => {
                   </div>
                 </div>
                 <div className={styles.acoesConteudo}>
-                  <button className={styles.botaoAcao}>👁️</button>
-                  <button className={styles.botaoAcao}>✏️</button>
-                  <button className={styles.botaoAcao}>📊</button>
-                  <button className={styles.botaoAcao}>🗑️</button>
+                  <button className={styles.botaoAcao}></button>
+                  <button className={styles.botaoAcao}></button>
+                  <button className={styles.botaoAcao}></button>
+                  <button className={styles.botaoAcao}></button>
                 </div>
               </div>
             ))}

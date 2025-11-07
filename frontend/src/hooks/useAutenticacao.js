@@ -5,7 +5,7 @@ export const useAutenticacao = () => {
   const [carregando, setCarregando] = useState(true)
 
   useEffect(() => {
-    // Verificar se há usuário logado no localStorage
+    
     const usuarioSalvo = localStorage.getItem('usuarioApex')
     if (usuarioSalvo) {
       setUsuario(JSON.parse(usuarioSalvo))
@@ -17,7 +17,7 @@ export const useAutenticacao = () => {
     return new Promise((resolve, reject) => {
       setCarregando(true)
       
-      // Simulação de autenticação
+      
       setTimeout(() => {
         if (dadosLogin.email && dadosLogin.senha) {
           const usuarioLogado = {

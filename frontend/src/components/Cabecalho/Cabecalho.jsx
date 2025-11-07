@@ -21,7 +21,7 @@ const Cabecalho = () => {
       <div className="container">
         <div className={styles.conteudoCabecalho}>
           <Link to="/" className={styles.logo}>
-            <span className={styles.iconeLogo}>🛡️</span>
+            <span className={styles.iconeLogo}></span>
             APEX
           </Link>
 

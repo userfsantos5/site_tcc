@@ -3,10 +3,10 @@ import styles from './Administracao.module.scss'
 
 const PainelAdmin = () => {
   const estatisticas = [
-    { rotulo: 'Usuários Totais', valor: '1,247', variacao: '+12%', icone: '👥' },
-    { rotulo: 'Artigos Publicados', valor: '89', variacao: '+5%', icone: '📝' },
-    { rotulo: 'Ferramentas Ativas', valor: '15', variacao: '+2%', icone: '🔧' },
-    { rotulo: 'Acessos Hoje', valor: '324', variacao: '+8%', icone: '👀' }
+    { rotulo: 'Usuários Totais', valor: '1,247', variacao: '+12%', icone: '' },
+    { rotulo: 'Artigos Publicados', valor: '89', variacao: '+5%', icone: '' },
+    { rotulo: 'Ferramentas Ativas', valor: '15', variacao: '+2%', icone: '' },
+    { rotulo: 'Acessos Hoje', valor: '324', variacao: '+8%', icone: '' }
   ]
 
   const atividadesRecentes = [
@@ -63,19 +63,19 @@ const PainelAdmin = () => {
           <h2>Ações Rápidas</h2>
           <div className={styles.gridAcoes}>
             <button className={styles.botaoAcao}>
-              <span className={styles.iconeAcao}>📝</span>
+              <span className={styles.iconeAcao}></span>
               Novo Artigo
             </button>
             <button className={styles.botaoAcao}>
-              <span className={styles.iconeAcao}>🔧</span>
+              <span className={styles.iconeAcao}></span>
               Nova Ferramenta
             </button>
             <button className={styles.botaoAcao}>
-              <span className={styles.iconeAcao}>👥</span>
+              <span className={styles.iconeAcao}></span>
               Gerenciar Usuários
             </button>
             <button className={styles.botaoAcao}>
-              <span className={styles.iconeAcao}>📊</span>
+              <span className={styles.iconeAcao}></span>
               Ver Relatórios
             </button>
           </div>
