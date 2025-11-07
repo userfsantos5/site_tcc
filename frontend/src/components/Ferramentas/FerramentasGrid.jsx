@@ -32,7 +32,7 @@ const FerramentasGrid = () => {
       nome: "Vazamento de Dados",
       descricao: "Verifique se seu email foi vazado",
       categoria: "Monitoramento",
-      icone: "📧",
+      icone: "",
       componente: (
         <div className={styles.componenteFerramenta}>
           <input
@@ -56,7 +56,7 @@ const FerramentasGrid = () => {
       nome: "Virus Total",
       descricao: "Analisar arquivos e URLs",
       categoria: "Análise",
-      icone: "🛡️",
+      icone: "",
       componente: (
         <div className={styles.componenteFerramenta}>
           <input
@@ -72,7 +72,7 @@ const FerramentasGrid = () => {
       nome: "Privacy Badger",
       descricao: "Bloqueador de rastreadores",
       categoria: "Privacidade",
-      icone: "🦡",
+      icone: "",
       componente: (
         <div className={styles.componenteFerramenta}>
           <p className={styles.descricaoFerramenta}>
@@ -86,7 +86,7 @@ const FerramentasGrid = () => {
       nome: "Bitwarden",
       descricao: "Gerenciador de senhas",
       categoria: "Senhas",
-      icone: "🗝️",
+      icone: "",
       componente: (
         <div className={styles.componenteFerramenta}>
           <p className={styles.descricaoFerramenta}>
@@ -100,7 +100,7 @@ const FerramentasGrid = () => {
       nome: "Analisador de Privacidade",
       descricao: "Analise sua privacidade no navegador",
       categoria: "Privacidade",
-      icone: "🔍",
+      icone: "",
       componente: (
         <div className={styles.componenteFerramenta}>
           <p className={styles.descricaoFerramenta}>
