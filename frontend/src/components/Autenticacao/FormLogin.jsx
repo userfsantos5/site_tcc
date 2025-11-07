@@ -35,7 +35,7 @@ const FormLogin = () => {
       <div className={styles.cardAutenticacao}>
         <div className={styles.cabecalhoAutenticacao}>
           <div className={styles.logo}>
-            <span className={styles.iconeLogo}>🛡️</span>
+            <span className={styles.iconeLogo}></span>
             APEX
           </div>
           <h1 className={styles.tituloAutenticacao}>Acesse sua Conta</h1>
