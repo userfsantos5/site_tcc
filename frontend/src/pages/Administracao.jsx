@@ -7,11 +7,11 @@ const Administracao = () => {
   const [abaAtiva, setAbaAtiva] = useState('painel')
 
   const abas = [
-    { id: 'painel', rotulo: 'Painel', icone: '📊' },
-    { id: 'usuarios', rotulo: 'Usuários', icone: '👥' },
-    { id: 'conteudo', rotulo: 'Conteúdo', icone: '📝' },
-    { id: 'ferramentas', rotulo: 'Ferramentas', icone: '🔧' },
-    { id: 'analytics', rotulo: 'Analytics', icone: '📈' }
+    { id: 'painel', rotulo: 'Painel', icone: '' },
+    { id: 'usuarios', rotulo: 'Usuários', icone: '' },
+    { id: 'conteudo', rotulo: 'Conteúdo', icone: '' },
+    { id: 'ferramentas', rotulo: 'Ferramentas', icone: '' },
+    { id: 'analytics', rotulo: 'Analytics', icone: '' }
   ]
 
   const renderizarConteudo = () => {
@@ -37,7 +37,7 @@ const Administracao = () => {
         <div className="container">
           <div className="conteudo-cabecalho-admin">
             <div className="logo-admin">
-              <span className="icone-logo">🛡️</span>
+              <span className="icone-logo"></span>
               <span>APEX Admin</span>
             </div>
             <nav className="navegacao-admin">
