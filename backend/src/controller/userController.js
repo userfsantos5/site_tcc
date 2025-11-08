@@ -2,9 +2,9 @@ import { userRepository } from "../repository/userRepository.js";
 
 const createUser = async (req, res) => {
   try {
-    const corpo = req.body; //corpo da requisição json
+    const corpo = req.body; 
 
-    // VALIDAÇÃO DOS CAMPOS
+  
     if (!corpo.nome || !corpo.email || !corpo.senha || !corpo.nivel_acesso) {
       return res.status(400).send({
         erro: "Todos os campos são obrigatórios",
