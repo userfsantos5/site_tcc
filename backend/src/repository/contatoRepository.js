@@ -1,17 +1,18 @@
 import conexao from "./connection.js";
 
 const contatoRepository = {
-  // 🔹 Cadastrar novo contato
+  // 🔹 Cadastrar novo contato (modificado)
   create: async (dados) => {
     try {
       const comando = `
-        INSERT INTO contatos (id_usuario, assunto, mensagem)
-        VALUES (?, ?, ?);
+        INSERT INTO contatos (nome, email, assunto, mensagem)
+        VALUES (?, ?, ?, ?);
       `;
 
       const connection = await conexao;
       const [resposta] = await connection.query(comando, [
-        dados.id_usuario,
+        dados.nome,
+        dados.email,
         dados.assunto,
         dados.mensagem,
       ]);
@@ -23,14 +24,13 @@ const contatoRepository = {
     }
   },
 
-  // 🔹 Listar todos os contatos
+  // 🔹 Listar todos os contatos (modificado)
   findAll: async () => {
     try {
       const comando = `
-        SELECT c.id, u.nome, u.email, c.assunto, c.mensagem, c.data_envio
-        FROM contatos c
-        INNER JOIN usuarios u ON u.id = c.id_usuario
-        ORDER BY c.data_envio DESC;
+        SELECT id, nome, email, assunto, mensagem, data_envio
+        FROM contatos 
+        ORDER BY data_envio DESC;
       `;
 
       const connection = await conexao;
