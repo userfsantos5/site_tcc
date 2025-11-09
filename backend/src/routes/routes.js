@@ -1,4 +1,4 @@
-import { createUser, findAll  } from "../controller/userController.js";
+import { createUser, findAll  } from "../controller/loginController.js";
 import { createContato, findAllContatos } from "../controller/contatoController.js";
 import express from "express";
 

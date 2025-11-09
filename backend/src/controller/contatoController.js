@@ -4,7 +4,6 @@ const createContato = async (req, res) => {
   try {
     const corpo = req.body;
 
-    // Agora aceita nome e email diretamente
     if (!corpo.nome || !corpo.email || !corpo.assunto || !corpo.mensagem) {
       return res.status(400).send({
         erro: "Campos obrigatórios: nome, email, assunto e mensagem",

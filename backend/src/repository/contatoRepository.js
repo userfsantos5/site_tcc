@@ -1,7 +1,7 @@
 import conexao from "./connection.js";
 
 const contatoRepository = {
-  // 🔹 Cadastrar novo contato (modificado)
+
   create: async (dados) => {
     try {
       const comando = `
@@ -24,7 +24,6 @@ const contatoRepository = {
     }
   },
 
-  // 🔹 Listar todos os contatos (modificado)
   findAll: async () => {
     try {
       const comando = `

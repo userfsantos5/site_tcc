@@ -1,4 +1,4 @@
-import { userRepository } from "../repository/userRepository.js";
+import { loginRepository } from "../repository/loginRepository.js";
 
 const createUser = async (req, res) => {
   try {
@@ -11,7 +11,7 @@ const createUser = async (req, res) => {
       });
     }
 
-    let usuario = await userRepository.create(corpo);
+    let usuario = await loginRepository.create(corpo);
 
     res.send({
       mensagem: "Usuário cadastrado com sucesso",
@@ -26,7 +26,7 @@ const createUser = async (req, res) => {
 
 const findAll = async (req, res) => {
   try {
-    const usuarios = await userRepository.findAll();
+    const usuarios = await loginRepository.findAll();
 
     if (!usuarios || usuarios.length === 0) {
       return res.status(404).send({
