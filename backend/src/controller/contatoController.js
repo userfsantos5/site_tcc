@@ -17,6 +17,7 @@ const createContato = async (req, res) => {
       id: resultado.insertId,
     });
   } catch (error) {
+    console.error("Erro no controller:", error);
     res.status(500).send({
       erro: "Erro ao enviar mensagem: " + error.message,
     });
