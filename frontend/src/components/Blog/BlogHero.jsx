@@ -8,8 +8,8 @@ const BlogHero = () => {
         <div className={styles.conteudoHero}>
           <h1 className={styles.tituloHero}>Blog & Educação em Segurança Digital</h1>
           <p className={styles.subtituloHero}>
-            Aprenda a proteger seus dados com nossos recursos educativos, tutoriais, e-books e 
-            mantenha-se atualizado com as últimas notícias.
+            Aprenda a proteger seus dados com nossos recursos educativos, artigos, e-books e 
+            mantenha-se bem informado.
           </p>
         </div>
       </div>

@@ -98,7 +98,7 @@ export default Hero;
             
             <div class="recursos-grid">
                 <div class="recurso-card">
-                                        <h3>Guias e Tutoriais</h3> 
+                                        <h3>Artigos e E-books</h3> 
                     <p>Material educativo completo para sua segurança digital</p>
                     <ul class="lista-check">
                         <li>Guias passo a passo</li>

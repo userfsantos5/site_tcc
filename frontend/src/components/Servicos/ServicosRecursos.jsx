@@ -13,16 +13,7 @@ const ServicosRecursos = () => {
         "Linguagem simples e clara"
       ]
     },
-    {
-      titulo: "Notícias e Alertas",
-      descricao: "Mantenha-se informado sobre as últimas ameaças e atualizações importantes de segurança digital.",
-      itens: [
-        "Alertas de segurança",
-        "Notícias do setor",
-        "Atualizações importantes",
-        "Casos educativos"
-      ]
-    },
+   
     {
       titulo: "Orientação e Dúvidas",
       descricao: "Tire suas dúvidas sobre segurança digital. Estamos aqui para ajudar você a se proteger.",

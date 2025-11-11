@@ -5,51 +5,24 @@ const BlogConteudo = () => {
   const [termoBusca, setTermoBusca] = useState('')
   const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todos')
 
-  const categorias = ['Todos', 'Guias', 'Ferramentas', 'Artigos']
+  const categorias = ['Todos', 'E-Books', 'Artigos']
   
   const postsBlog = [
     {
       id: 1,
       titulo: "Tramontes",
-      categoria: "Guias",
+      categoria: "Artigos",
       descricao: "Guia completo sobre proteção de dados pessoais",
       data: "2024-01-15"
     },
     {
       id: 2,
       titulo: "Venticulares de Força de Serviço",
-      categoria: "Ferramentas",
+      categoria: "E-Books",
       descricao: "Como criar senhas seguras e gerenciá-las",
       data: "2024-01-10"
     },
-    {
-      id: 3,
-      titulo: "Geraltar de Senhas Fonseca",
-      categoria: "Ferramentas",
-      descricao: "Ferramentas recomendadas para segurança digital",
-      data: "2024-01-05"
-    },
-    {
-      id: 4,
-      titulo: "Obrações do Sequenaro Digital",
-      categoria: "Artigos",
-      descricao: "As melhores práticas para navegação segura",
-      data: "2024-01-01"
-    },
-    {
-      id: 5,
-      titulo: "LGPD na Prática",
-      categoria: "Guias",
-      descricao: "Como aplicar a LGPD no dia a dia",
-      data: "2023-12-28"
-    },
-    {
-      id: 6,
-      titulo: "Segurança em Redes Sociais",
-      categoria: "Artigos",
-      descricao: "Protegendo seus dados nas redes sociais",
-      data: "2023-12-20"
-    }
+    
   ]
 
   const postsFiltrados = postsBlog.filter(post => {
@@ -76,7 +49,6 @@ const BlogConteudo = () => {
           
           <div className={styles.abasFiltro}>
             <span className={styles.rotuloFiltro}>Recursos Educativos</span>
-            <span className={styles.rotuloFiltro}>Notícias & Alertas</span>
           </div>
 
           <div className={styles.filtroCategoria}>
