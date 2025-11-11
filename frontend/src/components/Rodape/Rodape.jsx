@@ -1,68 +1,70 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from './Rodape.module.scss'
+// Ficheiro: frontend/src/components/Rodape/Rodape.jsx
+
+import React from 'react';
+// Importa o CSS Module com a formatação de colunas
+import styles from './Rodape.module.scss'; 
 
 const Rodape = () => {
-  const anoAtual = new Date().getFullYear()
+    return (
+        <footer className={styles.rodape}>
+            {/* O "container" pode ser uma classe global se estiver em App.scss,
+                ou pode ser adicionada ao Rodape.module.scss */}
+            <div className="container"> 
+                
+                {/* 1. Área de Colunas (Layout Horizontal) */}
+                <div className={styles.footerContent}>
+                    
+                    {/* Coluna 1: Logo e Descrição */}
+                    <div className={styles.footerCol}>
+                        <div className={styles.logoArea}>
+                            {/* Você precisará importar e usar sua logo aqui (ainda um problema em aberto) */}
+                            {/* Exemplo: <img src={logoApex} alt="APEX" className={styles.logoImg} /> */}
+                            <h3>APEX</h3>
+                            <p>O ápice em segurança de dados. Projeto de utilidade pública desenvolvido por estudantes para proteger você no mundo digital.</p>
+                        </div>
+                    </div>
+                    
+                    {/* Coluna 2: Navegação */}
+                    <nav className={styles.footerCol}>
+                        <h3>Navegação</h3>
+                        <ul>
+                            <li><a href="/">Início</a></li>
+                            <li><a href="#sobre">Quem Somos</a></li>
+                            <li><a href="#recursos">Recursos</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                    
+                    {/* Coluna 3: Recursos */}
+                    <nav className={styles.footerCol}>
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="#">Guias Práticos</a></li>
+                            <li><a href="#">Tutoriais</a></li>
+                            <li><a href="#">LGPD</a></li>
+                            <li><a href="#">Checklists</a></li>
+                        </ul>
+                    </nav>
+                    
+                    {/* Coluna 4: Projeto */}
+                    <nav className={styles.footerCol}>
+                        <h3>Projeto</h3>
+                        <ul>
+                            <li><a href="#">TCC - Técnico em Informática</a></li>
+                            <li><a href="#">Equipe</a></li>
+                            <li><a href="#">GitHub</a></li>
+                        </ul>
+                    </nav>
+                    
+                </div> {/* Fim de footerContent */}
 
-  return (
-    <footer className={styles.rodape}>
-      <div className="container">
-        <div className={styles.conteudoRodape}>
-          <div className={styles.secaoRodape}>
-            <div className={styles.logo}>
-              <span className={styles.iconeLogo}></span>
-              Apex
-            </div>
-            <p className={styles.descricaoRodape}>
-              O ápice em segurança de dados. Projeto de utilidade pública criado por estudantes para proteger você no mundo digital.
-            </p>
-          </div>
+                {/* 2. Área de Direitos Autorais */}
+                <div className={styles.footerBottom}>
+                    <small>&copy; 2024 APEX - Segurança de Dados. Todos os direitos reservados.</small>
+                </div>
+            </div> {/* Fim de container */}
+        </footer>
+    );
+};
 
-          <div className={styles.secaoRodape}>
-            <h4 className={styles.tituloRodape}>Navegação</h4>
-            <div className={styles.linksRodape}>
-              <Link to="/" className={styles.linkRodape}>Início</Link>
-              <Link to="/sobre" className={styles.linkRodape}>Sobre Nós</Link>
-              <Link to="/servicos" className={styles.linkRodape}>Serviços</Link>
-              <Link to="/blog" className={styles.linkRodape}>Blog</Link>
-              <Link to="/ferramentas" className={styles.linkRodape}>Ferramentas</Link>
-              <Link to="/contato" className={styles.linkRodape}>Contato</Link>
-            </div>
-          </div>
-
-          <div className={styles.secaoRodape}>
-            <h4 className={styles.tituloRodape}>Recursos</h4>
-            <div className={styles.linksRodape}>
-              <a href="#" className={styles.linkRodape}>Guias Práticos</a>
-              <a href="#" className={styles.linkRodape}>Tutoriais</a>
-              <a href="#" className={styles.linkRodape}>E-Books</a>
-              <a href="#" className={styles.linkRodape}>Notícias</a>
-            </div>
-          </div>
-
-          <div className={styles.secaoRodape}>
-            <h4 className={styles.tituloRodape}>Projeto</h4>
-            <div className={styles.infoRodape}>
-              <p>TCC - Técnico em Informática</p>
-              <p>Sem fins lucrativos</p>
-              <p>100% gratuito</p>
-              <p>Utilidade pública</p>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.rodapeInferior}>
-          <p className={styles.direitosAutorais}>
-            © {anoAtual} Apex - O Ápice em Segurança. Projeto de utilidade pública.
-          </p>
-          <p className={styles.creditos}>
-            Desenvolvido por estudantes de Técnico em Informática • Comprometidos com sua segurança digital
-          </p>
-        </div>
-      </div>
-    </footer>
-  )
-}
-
-export default Rodape
+export default Rodape;

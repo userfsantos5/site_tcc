@@ -1,100 +1,83 @@
-@import "../../App.scss";
+// 🎨 Variáveis de Cor
+$cor-fundo-rodape: #304B91; // O tom de azul escuro desejado
+$cor-texto-principal: #FFFFFF;
+$cor-link: #d9e2ff; // Branco suave para links
 
+// --- Layout Geral ---
+.rodape { /* Renomeado para "rodape" minúsculo */
+    background-color: $cor-fundo-rodape;
+    color: $cor-texto-principal;
+    padding: 40px 0 20px; // Espaçamento interno vertical
+    font-size: 14px;
+    line-height: 1.6; // Melhor legibilidade
 
-.rodape {
-  background: var(--cor-texto);
-  color: var(--cor-fundo);
-  padding: 60px 0 30px;
-  margin-top: auto;
+    a {
+        color: $cor-link; 
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
-.conteudoRodape {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-
-  @media (max-width: 968px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-}
-
-.secaoRodape {
-  .logo {
+// --- Conteúdo Principal (As Colunas) ---
+.footerContent {
+    // ⭐️ Chave para organizar na horizontal
     display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--cor-fundo);
-    margin-bottom: 16px;
+    justify-content: space-between; // Distribui o espaço entre as colunas
+    flex-wrap: wrap; // Permite quebra de linha em telas pequenas
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); // Linha divisória
+}
+
+// --- Estilo de Cada Coluna ---
+.footerCol {
+    // Permite que cada coluna cresça um pouco, mas com uma largura mínima
+    flex: 1; 
+    min-width: 200px; // Largura mínima para evitar quebras prematuras
+    margin-bottom: 20px; 
+    padding: 0 10px; // Espaçamento horizontal interno
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: $cor-texto-principal; 
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+}
+
+// --- Área de Direitos Autorais ---
+.footerBottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7); 
+}
+
+// 📱 Media Query para Telas Menores (Empilha o conteúdo para mobile)
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column; // Coloca as colunas de volta na vertical
+        align-items: center; // Centraliza o conteúdo
+    }
+
+    .footerCol {
+        min-width: 100%;
+        text-align: center; // Centraliza o texto
+        margin-bottom: 30px;
+        
+        ul {
+            text-align: center;
+        }
+    } 
   }
-
-  .iconeLogo {
-    font-size: 1.75rem;
-  }
-}
-
-.descricaoRodape {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.tituloRodape {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: var(--cor-fundo);
-}
-
-.linksRodape {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.linkRodape {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: var(--cor-primaria);
-  }
-}
-
-.infoRodape {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  p {
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
-  }
-}
-
-.rodapeInferior {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 30px;
-  text-align: center;
-}
-
-.direitosAutorais {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.creditos {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.875rem;
-  margin: 0;
-}

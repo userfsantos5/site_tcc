@@ -1,63 +1,329 @@
-.hero {
-  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
-  color: var(--cor-fundo);
-  padding: 120px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-.conteudoHero {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
 
-.tituloHero {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 24px;
-  line-height: 1.2;
-  
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-  }
-  
-  @media (max-width: 480px) {
-    font-size: 2rem;
-  }
-}
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.subtituloHero {
-  font-size: 1.25rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
-  line-height: 1.6;
-  
-  @media (max-width: 768px) {
-    font-size: 1.125rem;
-  }
-}
+        /* Header */
+        header {
+            background: white;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
-.botoesHero {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  
-  @media (max-width: 480px) {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #304B91;
+        }
+
+        .project-info {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #304B91, #1E3A8A);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .botao {
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .botao.primario {
+            background: white;
+            color: #304B91;
+        }
+
+        .botao.secundario {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* Seções */
+        section {
+            padding: 50px 0;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #304B91;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #304B91;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .missao {
+            background: white;
+            text-align: center;
+        }
+
+        .utilidade {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 15px;
+            background: #304B91;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .quem-somos {
+            background: #f0f5ff;
+        }
+
+        .valores {
+            background: white;
+        }
+
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .valor-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-top: 4px solid #304B91;
+        }
+
+        .valor-card h3 {
+            color: #304B91;
+            margin-bottom: 15px;
+        }
+
+        .recursos {
+            background: #f0f5ff;
+        }
+
+        .recursos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .recurso-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .recurso-card h3 {
+            color: #304B91;
+            margin-bottom: 15px;
+        }
+
+        .lista-check {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .lista-check li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .lista-check li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #304B91;
+            font-weight: bold;
+        }
+
+        .especiais {
+            background: white;
+        }
+
+        .especiais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .especial-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #304B91;
+        }
+
+        .especial-card h3 {
+            color: #304B91;
+            margin-bottom: 15px;
+        }
+
+        .porque-gratuito {
+            background: #304B91;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .porque-gratuito h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .porque-gratuito p {
+            color: white;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        .cta {
+            background: #f0f5ff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: #304B91;
+            margin-bottom: 20px;
+        }
+
+        .cta .botao {
+            background: #304B91;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero h2 {
+                font-size: 22px;
+            }
+            
+            .botoes {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .botao {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+   
