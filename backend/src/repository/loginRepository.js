@@ -1,6 +1,6 @@
 import conexao from "./connection.js";
 
-const userRepository = {
+const loginRepository= {
   create: async (corpo) => {
     try {
       const comando = `insert into usuarios(
@@ -46,4 +46,4 @@ const userRepository = {
   },
 };
 
-export { userRepository };
+export { loginRepository };

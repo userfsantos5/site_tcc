@@ -1,17 +1,17 @@
-import { userRepository } from "../repository/userRepository.js";
+import { loginRepository } from "../repository/loginRepository.js";
 
 const createUser = async (req, res) => {
   try {
-    const corpo = req.body; //corpo da requisição json
+    const corpo = req.body; 
 
-    // VALIDAÇÃO DOS CAMPOS
+  
     if (!corpo.nome || !corpo.email || !corpo.senha || !corpo.nivel_acesso) {
       return res.status(400).send({
         erro: "Todos os campos são obrigatórios",
       });
     }
 
-    let usuario = await userRepository.create(corpo);
+    let usuario = await loginRepository.create(corpo);
 
     res.send({
       mensagem: "Usuário cadastrado com sucesso",
@@ -26,7 +26,7 @@ const createUser = async (req, res) => {
 
 const findAll = async (req, res) => {
   try {
-    const usuarios = await userRepository.findAll();
+    const usuarios = await loginRepository.findAll();
 
     if (!usuarios || usuarios.length === 0) {
       return res.status(404).send({

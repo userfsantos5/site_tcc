@@ -8,6 +8,7 @@ const ContatoConteudo = () => {
     assunto: '',
     mensagem: ''
   })
+  const [enviando, setEnviando] = useState(false)
 
   const handleChange = (e) => {
     setDadosFormulario({
@@ -16,17 +17,42 @@ const ContatoConteudo = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-   
-    console.log('Formulário enviado:', dadosFormulario)
-    alert('Mensagem enviada com sucesso!')
-    setDadosFormulario({ nome: '', email: '', assunto: '', mensagem: '' })
+    setEnviando(true)
+
+    try {
+      const contatoResponse = await fetch('http://localhost:3000/contatos', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nome: dadosFormulario.nome,
+          email: dadosFormulario.email,
+          assunto: dadosFormulario.assunto,
+          mensagem: dadosFormulario.mensagem
+        }),
+      })
+
+      if (contatoResponse.ok) {
+        alert('Mensagem enviada com sucesso! Em breve entraremos em contato.')
+        setDadosFormulario({ nome: '', email: '', assunto: '', mensagem: '' })
+      } else {
+        const erro = await contatoResponse.json()
+        throw new Error(erro.erro || 'Erro ao enviar mensagem')
+      }
+    } catch (error) {
+      console.error('Erro:', error)
+      alert(error.message || 'Erro ao enviar mensagem. Tente novamente.')
+    } finally {
+      setEnviando(false)
+    }
   }
 
   const informacoesContato = [
     {
-      icone: '',
+      icone: '📧',
       titulo: 'Email',
       detalhes: [
         'contact@apex.org',
@@ -34,14 +60,14 @@ const ContatoConteudo = () => {
       ]
     },
     {
-      icone: '',
+      icone: '📞',
       titulo: 'Telefone',
       detalhes: [
-        ''
+        '(11) 9999-9999'
       ]
     },
     {
-      icone: '',
+      icone: '📍',
       titulo: 'Endereço',
       detalhes: [
         'Av. Coronel Octaviano de Freitas Costa, 463 - Socorro',
@@ -110,6 +136,7 @@ const ContatoConteudo = () => {
                   onChange={handleChange}
                   className={styles.inputFormulario}
                   required
+                  disabled={enviando}
                 />
               </div>
 
@@ -123,6 +150,7 @@ const ContatoConteudo = () => {
                   onChange={handleChange}
                   className={styles.inputFormulario}
                   required
+                  disabled={enviando}
                 />
               </div>
 
@@ -135,13 +163,14 @@ const ContatoConteudo = () => {
                   onChange={handleChange}
                   className={styles.selectFormulario}
                   required
+                  disabled={enviando}
                 >
                   <option value="">Selecione um assunto</option>
-                  <option value="duvida">Dúvida sobre segurança</option>
-                  <option value="sugestao">Sugestão</option>
-                  <option value="problema">Problema técnico</option>
-                  <option value="parceria">Proposta de parceria</option>
-                  <option value="outro">Outro</option>
+                  <option value="Dúvida sobre segurança">Dúvida sobre segurança</option>
+                  <option value="Sugestão">Sugestão</option>
+                  <option value="Problema técnico">Problema técnico</option>
+                  <option value="Proposta de parceria">Proposta de parceria</option>
+                  <option value="Outro">Outro</option>
                 </select>
               </div>
 
@@ -155,11 +184,16 @@ const ContatoConteudo = () => {
                   rows="6"
                   className={styles.textareaFormulario}
                   required
+                  disabled={enviando}
                 ></textarea>
               </div>
 
-              <button type="submit" className={`botao botao--primario ${styles.botaoEnviar}`}>
-                Enviar Mensagem
+              <button 
+                type="submit" 
+                className={`botao botao--primario ${styles.botaoEnviar}`}
+                disabled={enviando}
+              >
+                {enviando ? 'Enviando...' : 'Enviar Mensagem'}
               </button>
             </form>
           </div>
